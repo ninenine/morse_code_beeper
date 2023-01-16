@@ -4,10 +4,14 @@ This project is a simple command-line tool that converts a given text input into
 
 ## Usage
 
-`morse_code_beeper [OPTIONS]
+```bash
+morse_code_beeper [OPTIONS]
 
 OPTIONS:
--m, --msg <msg> The message to convert to Morse code`
+  -m, --msg <MSG>  The message to convert to Morse code
+  -h, --help       Print help
+  -V, --version    Print version
+```
 
 ## Requirements
 
@@ -20,15 +24,15 @@ OPTIONS:
 
 `git clone https://github.com/ninenine/morse_code_beeper.git`
 
-1.  Navigate to the project directory
+2.  Navigate to the project directory
 
 `cd morse_code_beeper`
 
-1.  Build the project
+3.  Build the project
 
 `cargo build --release`
 
-1.  Run the binary
+4.  Run the binary
 
 `./target/release/morse_code_beeper -m "text to be converted"`
 

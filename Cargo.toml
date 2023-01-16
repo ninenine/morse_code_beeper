@@ -1,5 +1,5 @@
 [package]
-name = "text-to-morse-code"
+name = "morse_code_beeper"
 version = "0.1.0"
 description = "This is a simple program that convertes text into morse code beeps"
 authors = ["ninenine"]

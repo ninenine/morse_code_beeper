@@ -121,7 +121,7 @@ fn main() {
         if c == ' ' {
             io::stdout().write(b"\n").unwrap();
             // Average time between spaces in words: 3 dots (or 3 * the time to play a dot)
-            std::thread::sleep(std::time::Duration::from_millis(1000));
+            std::thread::sleep(std::time::Duration::from_millis(150));
         } else {
             // Get the Morse code for the character
             let morse_code = MORSE_CODE_DICT.get(&c).unwrap();
@@ -132,13 +132,13 @@ fn main() {
                     // Play a beep for a dot
                     let source = SineWave::new(700.0);
                     // Time to play a dot: 1 unit (often described as 1 "dit")
-                    sink.append(source.take_duration(std::time::Duration::from_millis(100)));
+                    sink.append(source.take_duration(std::time::Duration::from_millis(50)));
                     sink.sleep_until_end();
                 } else if code == '-' {
                     // Play a beep for a dash
                     let source = SineWave::new(700.0);
                     // Time to play a dash: 3 units (often described as 3 "dits")
-                    sink.append(source.take_duration(std::time::Duration::from_millis(300)));
+                    sink.append(source.take_duration(std::time::Duration::from_millis(150)));
                     sink.sleep_until_end();
                 }
             }
